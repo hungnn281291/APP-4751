@@ -1,0 +1,53 @@
+{
+    "file_purpose": "This file abstracts the input variable values to a JSON schema removing the Terraform/variables dependency. Parameters specified in this file are applicable for a specific stage or environment.",
+    "input_parameters": {
+        "app_sub_id": "184d10e5-0141-4e77-a96d-41d59344f455",
+        "app_short_name": "a4751",
+        "app_sub_name": "tcg-npae-a4751-sub001",
+        "app_sku_name": "S3",
+        "app_os_type": "Windows",
+        "app_ftps_state": "Disabled",
+        "app_allowed_origins": "mysite",
+        "application_name":"vnp-nerdio-nmw-app",
+        "application_id":"5f605118-c885-436e-911e-28bb7f673890",        
+        "object_id":"4adc5c7b-02da-44ca-8d39-e9ed4fd25b28",
+        "tenant_id":"49dfc6a3-5fb7-49f4-adea-c54e725bb854",
+        "object_id_tcg":"c7b4ccea-d439-4507-8c0a-d71df03974c5",
+        "resource_group_name":"tcg-npae-a4751-rg001",
+        "resource_group_name_2":"tcg-npae-a4751-rg002",
+        "resource_group_name_3":"tcg-npae-a4751-rg003",
+        "virtual_network_name":"tcg-npae-a4751-vnet001",
+        "virtual_network_name_rg":"tcg-npae-a4751-network-rg001",
+        "subnet_01":"tcg-npae-a4751-snet001",
+        "subnet_02":"AzurePrivateEndpoint",
+        "environment": "non_production",
+        "location": "australiaeast",
+        "environment_location_id": "npae",
+        "private_dns_zones_rg": "tcg-npae-shared-private_dns-rg001",   
+        "network_rules": [
+            "203.35.185.77",
+            "203.35.135.171",
+            "104.209.104.3",
+            "203.41.142.76",
+            "104.210.231.26",
+            "203.35.135.174",
+            "203.35.135.168",
+            "20.53.53.224",
+            "203.41.142.77",
+            "104.210.230.26",
+            "20.70.222.112",
+            "203.35.185.76"
+        ],           
+        "tags": {
+            "telstra_applicationid": "APP-4751",
+            "telstra_environmentclass": "nonproduction",
+            "telstra_environmentuse": "dev",
+            "telstra_internetfacing": "false",
+            "telstra_dataclassification": "internal",
+            "telstra_dataclassificationsubtype": "",
+            "telstra_dataregion": "australia",
+            "telstra_costcentre": "nitpht",
+            "telstra_securitycontact": "d1214947@team.telstra.com"
+        }        
+    }
+}

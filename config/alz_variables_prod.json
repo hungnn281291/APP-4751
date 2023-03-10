@@ -1,0 +1,6 @@
+{
+    "file_purpose": "This file abstracts the input variable values to a JSON schema removing the Terraform/variables dependency. Parameters specified in this file are applicable for a specific stage or environment.",
+    "input_parameters": {
+        "resource_group_name": "tcg-pdae-a4751-rg001"
+    }
+}

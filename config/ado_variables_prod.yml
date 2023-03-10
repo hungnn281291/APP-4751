@@ -1,0 +1,9 @@
+variables:
+  ${{ if or(eq(variables['Build.SourceBranch'], 'refs/heads/main'),eq(variables['Build.Reason'], 'IndividualCI'),eq(variables['Build.Reason'], 'PullRequest'),eq(variables['Build.SourceBranch'], '')) }}:
+    stage2ALZName: 'tcg-pdae-a4751-sub001'
+    stage2Env: APP-4751_prod
+    stage2SubId: 'XXX'
+    stage2TFStateSubscriptionID: 'XXX'
+    stage2TFStateResourceGroup: 'XXX'
+    stage2TFStateStorageAccount: 'XXX'
+    stage2additionalParameters: '-var env_specific_config=alz_variables_prod.json'

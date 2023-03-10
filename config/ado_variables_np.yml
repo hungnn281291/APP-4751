@@ -1,0 +1,10 @@
+variables:
+  TFStateContainer: 'states'
+
+  stage1ALZName: 'tcg-npae-a4751-sub001'
+  stage1Env: APP-4751_np
+  stage1SubId: '184d10e5-0141-4e77-a96d-41d59344f455'
+  stage1TFStateSubscriptionID: '184d10e5-0141-4e77-a96d-41d59344f455'
+  stage1TFStateResourceGroup: 'tcg-npae-a4751-management-rg001'
+  stage1TFStateStorageAccount: 'tcgnpaea4751sa001'
+  stage1additionalParameters: '-var env_specific_config=alz_variables_np.json -var SUBSCRIPTION_ID_SECONDARY=dbd23b8a-ab6e-4c3f-9571-d6777ef9301c'
