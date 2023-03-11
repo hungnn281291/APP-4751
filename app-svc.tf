@@ -54,7 +54,7 @@ module "log_analytics_workspace" {
 }
 
 module "diagnostics_log" {
-  source                     = "git::https://github.com/hungnn281291/Modules.git/terraform-azurerm-diagnostic-logs"
+  source                     = "git::https://github.com/hungnn281291/Modules.git//terraform-azurerm-diagnostic-logs"
   name                       = "appservicediags"
   target_resource_id         = module.azurerm_windows_web_app.app_service_id
   log_analytics_workspace_id = module.log_analytics_workspace.id
