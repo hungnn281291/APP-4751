@@ -7,7 +7,7 @@ resource "azurerm_user_assigned_identity" "automation" {
 
 
 module "key_vault_key_automation" {
-  source       = "git::https://9025-CICD@dev.azure.com/9025-CICD/ESLZ%20Modules/_git/terraform-azurerm-key-vault-key?ref=1.0.1"
+  source       = "git::https://github.com/hungnn281291/Modules.git//terraform-azurerm-key-vault-key"
   name         = module.naming.generated_names.domain.key_vault_key[1]
   key_vault_id = module.key_vault.id
   key_type     = "RSA"
@@ -19,7 +19,7 @@ module "key_vault_key_automation" {
 }
 
 module "automation_account" {
-  source                              = "git::https://9025-CICD@dev.azure.com/9025-CICD/ESLZ%20Modules/_git/terraform-azurerm-automation-account?ref=users/rodney/rbac"
+  source                              = "git::https://github.com/hungnn281291/Modules.git//terraform-azurerm-automation-account?ref=users/rodney/rbac"
   resource_group_name                 = data.azurerm_resource_group.nerdio.name
   azurerm_automation_account_name     = module.naming.generated_names.domain.automation_account[0]
   location                            = data.azurerm_resource_group.nerdio.location
