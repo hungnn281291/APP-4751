@@ -1,5 +1,5 @@
 module "azurerm_windows_web_app" {
-  source                                       = "git::https://github.com/hungnn281291/Modules.git/terraform-azurerm-windows-app-service"
+  source                                       = "git::https://github.com/hungnn281291/Modules.git//terraform-azurerm-windows-app-service"
   resource_group_name                          = data.azurerm_resource_group.nerdio.name
   location                                     = data.azurerm_resource_group.nerdio.location
   app_service_plan_name                        = module.naming.generated_names.domain.app_service_plan[0]
@@ -43,7 +43,7 @@ module "azurerm_windows_web_app" {
 }
 
 module "log_analytics_workspace" {
-  source                     = "git::https://github.com/hungnn281291/Modules.git/terraform-azurerm-log-analytics-workspace"
+  source                     = "git::https://github.com/hungnn281291/Modules.git//terraform-azurerm-log-analytics-workspace"
   name                       = module.naming.generated_names.domain.log_analytics_workspace[0]
   location                   = data.azurerm_resource_group.nerdio.location
   resource_group_name        = data.azurerm_resource_group.nerdio.name
