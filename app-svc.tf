@@ -1,5 +1,5 @@
 module "azurerm_windows_web_app" {
-  source                                       = "git::https://9025-CICD@dev.azure.com/9025-CICD/ESLZ%20Modules/_git/terraform-azurerm-windows-app-service?ref=1.0.5"
+  source                                       = "git::https://github.com/hungnn281291/Modules.git/terraform-azurerm-windows-app-service"
   resource_group_name                          = data.azurerm_resource_group.nerdio.name
   location                                     = data.azurerm_resource_group.nerdio.location
   app_service_plan_name                        = module.naming.generated_names.domain.app_service_plan[0]
@@ -43,7 +43,7 @@ module "azurerm_windows_web_app" {
 }
 
 module "log_analytics_workspace" {
-  source                     = "git::https://9025-CICD@dev.azure.com/9025-CICD/ESLZ%20Modules/_git/terraform-azurerm-log-analytics-workspace?ref=1.0.2"
+  source                     = "git::https://github.com/hungnn281291/Modules.git/terraform-azurerm-log-analytics-workspace"
   name                       = module.naming.generated_names.domain.log_analytics_workspace[0]
   location                   = data.azurerm_resource_group.nerdio.location
   resource_group_name        = data.azurerm_resource_group.nerdio.name
@@ -54,7 +54,7 @@ module "log_analytics_workspace" {
 }
 
 module "diagnostics_log" {
-  source                     = "git::https://9025-CICD@dev.azure.com/9025-CICD/ESLZ%20Modules/_git/terraform-azurerm-diagnostic-logs?ref=1.0.3"
+  source                     = "git::https://github.com/hungnn281291/Modules.git/terraform-azurerm-diagnostic-logs"
   name                       = "appservicediags"
   target_resource_id         = module.azurerm_windows_web_app.app_service_id
   log_analytics_workspace_id = module.log_analytics_workspace.id
