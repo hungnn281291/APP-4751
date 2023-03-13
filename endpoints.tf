@@ -1,5 +1,5 @@
 module "private_endpoint_1" {
-  source                        = "git::https://9025-CICD@dev.azure.com/9025-CICD/ESLZ%20Modules/_git/terraform-azurerm-private-endpoint?ref=1.0.1"
+  source                        = "git::https://github.com/hungnn281291/Modules.git//terraform-azurerm-private-endpoint"
   location                      = data.azurerm_resource_group.nerdio.location
   resource_group_name           = data.azurerm_resource_group.nerdio.name
   privateendpoint_name          = module.naming.generated_names.domain.private_endpoint[0]
@@ -15,7 +15,7 @@ module "private_endpoint_1" {
 }
 
 module "private_endpoint_2" {
-  source                        = "git::https://9025-CICD@dev.azure.com/9025-CICD/ESLZ%20Modules/_git/terraform-azurerm-private-endpoint?ref=1.0.1"
+  source                        = "git::https://github.com/hungnn281291/Modules.git//terraform-azurerm-private-endpoint"
   location                      = data.azurerm_resource_group.nerdio.location
   resource_group_name           = data.azurerm_resource_group.nerdio.name
   privateendpoint_name          = module.naming.generated_names.domain.private_endpoint[1]
@@ -31,7 +31,7 @@ module "private_endpoint_2" {
 }
 
 module "private_endpoint_3" {
-  source                        = "git::https://9025-CICD@dev.azure.com/9025-CICD/ESLZ%20Modules/_git/terraform-azurerm-private-endpoint?ref=1.0.1"
+  source                        = "git::https://github.com/hungnn281291/Modules.git//terraform-azurerm-private-endpoint"
   location                      = data.azurerm_resource_group.nerdio.location
   resource_group_name           = data.azurerm_resource_group.nerdio.name
   privateendpoint_name          = module.naming.generated_names.domain.private_endpoint[3]
@@ -47,7 +47,7 @@ module "private_endpoint_3" {
 }
 
 module "private_endpoint_4" {
-  source                        = "git::https://9025-CICD@dev.azure.com/9025-CICD/ESLZ%20Modules/_git/terraform-azurerm-private-endpoint?ref=1.0.1"
+  source                        = "git::https://github.com/hungnn281291/Modules.git//terraform-azurerm-private-endpoint"
   location                      = data.azurerm_resource_group.nerdio.location
   resource_group_name           = data.azurerm_resource_group.nerdio.name
   privateendpoint_name          = module.naming.generated_names.domain.private_endpoint[4]
@@ -63,7 +63,7 @@ module "private_endpoint_4" {
 }
 
 module "private_endpoint_5" {
-  source                        = "git::https://9025-CICD@dev.azure.com/9025-CICD/ESLZ%20Modules/_git/terraform-azurerm-private-endpoint?ref=1.0.1"
+  source                        = "git::https://github.com/hungnn281291/Modules.git//terraform-azurerm-private-endpoint"
   location                      = data.azurerm_resource_group.nerdio.location
   resource_group_name           = data.azurerm_resource_group.nerdio.name
   privateendpoint_name          = module.naming.generated_names.domain.private_endpoint[5]
@@ -79,7 +79,7 @@ module "private_endpoint_5" {
 }
 
 module "private_endpoint_6" {
-  source                        = "git::https://9025-CICD@dev.azure.com/9025-CICD/ESLZ%20Modules/_git/terraform-azurerm-private-endpoint?ref=1.0.1"
+  source                        = "git::https://github.com/hungnn281291/Modules.git//terraform-azurerm-private-endpoint"
   location                      = data.azurerm_resource_group.nerdio.location
   resource_group_name           = data.azurerm_resource_group.nerdio.name
   privateendpoint_name          = module.naming.generated_names.domain.private_endpoint[6]
@@ -95,7 +95,7 @@ module "private_endpoint_6" {
 }
 
 module "private_endpoint_7" {
-  source                        = "git::https://9025-CICD@dev.azure.com/9025-CICD/ESLZ%20Modules/_git/terraform-azurerm-private-endpoint?ref=1.0.1"
+  source                        = "git::https://github.com/hungnn281291/Modules.git//terraform-azurerm-private-endpoint"
   location                      = data.azurerm_resource_group.nerdio.location
   resource_group_name           = data.azurerm_resource_group.nerdio.name
   privateendpoint_name          = module.naming.generated_names.domain.private_endpoint[7]
@@ -111,7 +111,7 @@ module "private_endpoint_7" {
 }
 
 module "private_endpoint_8" {
-  source                        = "git::https://9025-CICD@dev.azure.com/9025-CICD/ESLZ%20Modules/_git/terraform-azurerm-private-endpoint?ref=1.0.1"
+  source                        = "git::https://github.com/hungnn281291/Modules.git//terraform-azurerm-private-endpoint"
   location                      = data.azurerm_resource_group.nerdio.location
   resource_group_name           = data.azurerm_resource_group.nerdio.name
   privateendpoint_name          = module.naming.generated_names.domain.private_endpoint[8]

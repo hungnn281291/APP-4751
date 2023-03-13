@@ -28,7 +28,7 @@ locals {
 }
 
 module "naming" {
-  source       = "git::https://9025-CICD@dev.azure.com/9025-CICD/ESLZ%20Modules/_git/terraform-azurerm-naming?ref=1.0.7"
+  source       = "git::https://github.com/hungnn281291/Modules.git//terraform-azurerm-naming"
   product_area = "tcg"
   environment  = local.environment
   location     = local.location
@@ -117,7 +117,7 @@ data "azurerm_private_dns_zone" "vault" {
   resource_group_name = local.private_dns_zones_rg
 }
 
-/*
+
 data "azurerm_mssql_server" "sql" {
   name                = module.naming.generated_names.domain.storage_account[0]
   resource_group_name = data.azurerm_resource_group.nerdio.name
@@ -141,4 +141,4 @@ data "azurerm_user_assigned_identity" "automation" {
   resource_group_name = data.azurerm_resource_group.nerdio.name
   name                = module.naming.generated_names.domain.user_assigned_identity[1]
 
-}*/
+}
