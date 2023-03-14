@@ -11,8 +11,8 @@ locals {
   location                = local.env_specific_config.location
   tenant_id               = local.env_specific_config.tenant_id
   resource_group_name     = local.env_specific_config.resource_group_name
-  resource_group_name_2   = local.env_specific_config.resource_group_name_2
-  resource_group_name_3   = local.env_specific_config.resource_group_name_3
+  #resource_group_name_2   = local.env_specific_config.resource_group_name_2
+  #resource_group_name_3   = local.env_specific_config.resource_group_name_3
   virtual_network_name    = local.env_specific_config.virtual_network_name
   virtual_network_name_rg = local.env_specific_config.virtual_network_name_rg
   subnet_01               = local.env_specific_config.subnet_01
@@ -62,14 +62,6 @@ data "azurerm_resource_group" "nerdio" {
   name = local.resource_group_name
 }
 
-data "azurerm_resource_group" "nerdio2" {
-  name = local.resource_group_name_2
-}
-
-data "azurerm_resource_group" "nerdio3" {
-  name = local.resource_group_name_3
-}
-
 data "azurerm_virtual_network" "nerdio" {
   name                = local.virtual_network_name
   resource_group_name = local.virtual_network_name_rg
@@ -88,31 +80,31 @@ data "azurerm_subnet" "endpoints" {
 }
 
 data "azurerm_private_dns_zone" "web" {
-  provider            = azurerm.secondary
+  #provider            = azurerm.secondary
   name                = "privatelink.azurewebsites.net"
   resource_group_name = local.private_dns_zones_rg
 }
 
 data "azurerm_private_dns_zone" "blob" {
-  provider            = azurerm.secondary
+  #provider            = azurerm.secondary
   name                = "privatelink.blob.core.windows.net"
   resource_group_name = local.private_dns_zones_rg
 }
 
 data "azurerm_private_dns_zone" "database" {
-  provider            = azurerm.secondary
+  #provider            = azurerm.secondary
   name                = "privatelink.database.windows.net"
   resource_group_name = local.private_dns_zones_rg
 }
 
 data "azurerm_private_dns_zone" "file" {
-  provider            = azurerm.secondary
+  #provider            = azurerm.secondary
   name                = "privatelink.file.core.windows.net"
   resource_group_name = local.private_dns_zones_rg
 }
 
 data "azurerm_private_dns_zone" "vault" {
-  provider            = azurerm.secondary
+  #provider            = azurerm.secondary
   name                = "privatelink.vaultcore.azure.net"
   resource_group_name = local.private_dns_zones_rg
 }
