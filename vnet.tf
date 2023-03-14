@@ -5,7 +5,7 @@ resource "azurerm_resource_group" "tcg-npae-a4751-rg001" {
 }
 
 resource "azurerm_resource_group" "tcg-npae-shared-private_dns-rg001" {
-  name     = "nerdio-prod-rg"
+  name     = "nerdio-prod-privatedns-rg"
   location = "australiaeast"
 }
 
