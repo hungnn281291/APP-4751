@@ -4,6 +4,11 @@ resource "azurerm_resource_group" "tcg-npae-a4751-rg001" {
   location = "australiaeast"
 }
 
+resource "azurerm_resource_group" "tcg-npae-shared-private_dns-rg001" {
+  name     = "nerdio-prod-rg"
+  location = "australiaeast"
+}
+
 # Create a virtual network
 resource "azurerm_virtual_network" "tcg-npae-a4751-vnet001" {
   name                = "tcg-npae-a4751-vnet001"
@@ -83,3 +88,4 @@ resource "azurerm_subnet_network_security_group_association" "tcg-npae-a4751-nsg
   subnet_id                 = azurerm_subnet.tcg-npae-a4751-snet001.id
   network_security_group_id = azurerm_network_security_group.tcg-npae-a4751-nsg001.id
 }
+
