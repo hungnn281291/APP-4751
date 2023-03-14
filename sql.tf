@@ -10,7 +10,7 @@ resource "azurerm_user_assigned_identity" "sql" {
 }
 
 module "key_vault_key_sql" {
-  source       = "git::https://9025-CICD@dev.azure.com/9025-CICD/ESLZ%20Modules/_git/terraform-azurerm-key-vault-key?ref=1.0.1"
+  source       = "git::https://github.com/hungnn281291/Modules.git//terraform-azurerm-key-vault-key"
   name         = module.naming.generated_names.domain.key_vault_key[0]
   key_vault_id = module.key_vault.id
   key_type     = "RSA"
@@ -23,14 +23,14 @@ module "key_vault_key_sql" {
 }
 
 module "roleassignment_sg_1" {
-  source             = "git::https://9025-CICD@dev.azure.com/9025-CICD/ESLZ%20Modules/_git/terraform-azurerm-role-assignment?ref=1.0.3"
+  source             = "git::https://github.com/hungnn281291/Modules.git//terraform-azurerm-role-assignment"
   scope              = module.storage_account_1.id
   role_definition_id = data.azurerm_role_definition.sg_blob_reader.id
   principal_id       = [local.object_id_tcg]
 }
 
 module "storage_account_1" {
-  source              = "git::https://9025-CICD@dev.azure.com/9025-CICD/ESLZ%20Modules/_git/terraform-azurerm-storage-account?ref=1.0.6"
+  source              = "git::https://github.com/hungnn281291/Modules.git//terraform-azurerm-storage-account"
   resource_group_name = data.azurerm_resource_group.nerdio.name
   name                = module.naming.generated_names.domain.storage_account[5]
   location            = data.azurerm_resource_group.nerdio.location
@@ -41,7 +41,7 @@ module "storage_account_1" {
 }
 
 module "mssql_server" {
-  source                              = "git::https://9025-CICD@dev.azure.com/9025-CICD/ESLZ%20Modules/_git/terraform-azurerm-mssql-server?ref=1.0.4"
+  source                              = "git::https://github.com/hungnn281291/Modules.git//terraform-azurerm-mssql-server"
   mssql_server_name                   = module.naming.generated_names.domain.sql_server[0]
   resource_group_id                   = data.azurerm_resource_group.nerdio.id
   location                            = data.azurerm_resource_group.nerdio.location
@@ -62,7 +62,7 @@ module "mssql_server" {
 }
 
 module "mssql-database" {
-  source              = "git::https://9025-CICD@dev.azure.com/9025-CICD/ESLZ%20Modules/_git/terraform-azurerm-mssql-database?ref=1.0.4"
+  source              = "git::https://github.com/hungnn281291/Modules.git//terraform-azurerm-mssql-database"
   mssql_database_name = module.naming.generated_names.domain.sql_database[0]
   mssql_server_id     = module.mssql_server.id
   storage_account_id  = module.storage_account_1.id

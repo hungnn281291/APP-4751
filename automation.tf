@@ -1,4 +1,3 @@
-/*
 resource "azurerm_user_assigned_identity" "automation" {
   location            = data.azurerm_resource_group.nerdio.location
   name                = module.naming.generated_names.domain.user_assigned_identity[1]
@@ -19,7 +18,7 @@ module "key_vault_key_automation" {
 }
 
 module "automation_account" {
-  source                              = "git::https://github.com/hungnn281291/Modules.git//terraform-azurerm-automation-account?ref=users/rodney/rbac"
+  source                              = "git::https://github.com/hungnn281291/Modules.git//terraform-azurerm-automation-account"
   resource_group_name                 = data.azurerm_resource_group.nerdio.name
   azurerm_automation_account_name     = module.naming.generated_names.domain.automation_account[0]
   location                            = data.azurerm_resource_group.nerdio.location
@@ -28,4 +27,3 @@ module "automation_account" {
   user_assigned_identity_id           = azurerm_user_assigned_identity.automation.id
   user_assigned_identity_principal_id = azurerm_user_assigned_identity.automation.principal_id
 }
-*/
