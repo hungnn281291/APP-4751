@@ -4,4 +4,4 @@ variable "env_specific_config" {
 }
 
 # Data for the "Shared Services" subscription
-variable "SUBSCRIPTION_ID_SECONDARY" { type = string }
+#variable "SUBSCRIPTION_ID_SECONDARY" { type = string }
